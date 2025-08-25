@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>맛집 인터랙션 데모 — Scroll & Before/After</title>
+  <meta name="description" content="체험단용 임베드 데모: GSAP 스크롤 스토리텔링 + 전/후 비교 슬라이더" />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="./style.css" />
+  <!-- GSAP + ScrollTrigger (CDN) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1>🍤 바삭여행: “겉바속촉”이 되는 순간</h1>
+    <p class="lead">네이버 블로그에 <strong>외부콘텐츠/임베드</strong>로 붙여넣어 데모로 활용하세요.</p>
+  </header>
+
+  <!-- Section A. Scroll Storytelling -->
+  <section class="story" aria-label="스크롤 스토리텔링">
+    <div class="panel p1">
+      <div class="stack">
+        <h2>01 재료 준비</h2>
+        <p>신선한 재료가 맛의 80%를 결정해요. 과한 수분은 제거!</p>
+      </div>
+      <picture class="bg">
+        <img src="https://images.unsplash.com/photo-1546549039-49e5e6ebe7bc?q=80&w=1600&auto=format&fit=crop" alt="신선한 식재료" loading="eager" />
+      </picture>
+    </div>
+
+    <div class="panel p2">
+      <div class="stack">
+        <h2>02 황금 온도</h2>
+        <p>기름 온도 170–180℃. 튀김옷은 얇고 빠르게!</p>
+      </div>
+      <picture class="bg">
+        <img src="https://images.unsplash.com/photo-1611299103842-6c73a996af63?q=80&w=1600&auto=format&fit=crop" alt="튀김 조리 과정" loading="lazy" />
+      </picture>
+    </div>
+
+    <div class="panel p3">
+      <div class="stack">
+        <h2>03 플레이팅</h2>
+        <p>소스는 1/2만, 레몬 한 번 톡. 느끼함 없이 끝까지!</p>
+      </div>
+      <picture class="bg">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600&auto=format&fit=crop" alt="완성된 튀김 요리" loading="lazy" />
+      </picture>
+    </div>
+  </section>
+
+  <!-- Section B. Before/After comparison -->
+  <section class="ba" aria-label="전/후 비교 슬라이더">
+    <header class="section-head">
+      <h2>전/후 비교 — “소스 코팅”</h2>
+      <p>핸들을 드래그하거나 키보드(← →)로 조절하세요.</p>
+    </header>
+
+    <div class="ba-wrap" id="ba1">
+      <img class="ba-img ba-after" src="https://images.unsplash.com/photo-1576785213427-56d4b0e87a36?q=80&w=1400&auto=format&fit=crop" alt="소스 코팅 후 사진" loading="lazy">
+      <img class="ba-img ba-before" src="https://images.unsplash.com/photo-1562967916-eb82221dfb36?q=80&w=1400&auto=format&fit=crop" alt="소스 코팅 전 사진" loading="lazy">
+      <div class="ba-mask" aria-hidden="true"></div>
+      <div class="ba-handle" role="slider" aria-label="전/후 비교 핸들" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
+        <span class="ba-grip" aria-hidden="true"></span>
+      </div>
+    </div>
+    <p class="ba-caption">왼쪽: <strong>Before</strong> / 오른쪽: <strong>After</strong></p>
+  </section>
+
+  <footer class="site-footer" role="contentinfo">
+    <a class="cta" href="#" target="_blank" rel="noopener">네이버 예약/주문 바로가기</a>
+    <small>© 2025 Demo. Replace links & images with your own.</small>
+  </footer>
+</body>
+</html>
